@@ -1,0 +1,38 @@
+def convert(a):
+    count = 0   
+    for i in a:
+        a[count] = int(a[count])
+        count += 1
+    return a
+
+def sorting(b):
+    n = len(b)
+    for i in range(n):
+        for j in range(0, n-1):
+            if b[j]> b[j + 1]:
+                b[j], b[j + 1] = b[j + 1], b[j]
+    return b
+
+def operation(c):
+    min = 0
+    maxi = 0
+    n = len(c)
+    for i, j in enumerate(c):
+        if i == 0:
+            continue
+        maxi += j
+    for i, j in enumerate(c):
+        if i == 4:
+            continue
+        min += j
+    return maxi, min
+
+def main():
+    arr = input().split()
+    arr = convert(arr)
+    arr = sorting(arr)
+    x, y = operation(arr)
+    print(y, x)
+
+if __name__ == "__main__":
+    main()
