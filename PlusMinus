@@ -1,0 +1,23 @@
+lenght = int(input())
+arr = input().split()
+plus = []
+minus = []
+zero = []
+
+for i in arr:
+    i = int(i)
+    if i > 0:
+        plus.append(i)
+        continue
+    if i < 0:
+        minus.append(i)
+        continue
+    zero.append(i)
+
+Rplus = len(plus)/lenght
+Rminus = len(minus)/lenght
+Rzero = len(zero)/lenght
+
+print(f'{Rplus:.6f}')
+print(f'{Rminus:.6f}')
+print(f'{Rzero:.6f}')
